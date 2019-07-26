@@ -8,7 +8,7 @@ export default class CreateTodo extends Component {
         this.onChangeTodoDescription = this.onChangeTodoDescription.bind(this);
         this.onChangeTodoResponsible = this.onChangeTodoResponsible.bind(this);
         this.onChangeTodoPriority = this.onChangeTodoPriority.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
+        this.onSubmitForm = this.onSubmitForm.bind(this);
 
 
         this.state = {
@@ -38,7 +38,7 @@ export default class CreateTodo extends Component {
         });
     }
 
-    onSubmit(e) {
+    onSubmitForm(e) {
 
         e.preventDefault();
 
@@ -65,7 +65,7 @@ export default class CreateTodo extends Component {
 
         <div style={{marginTop: 10}}>
             <h3>Create New Todo</h3>
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.onSubmitForm}>
                 <div className="form-group">
                     <label>Description: </label>
                     <input type="text" className='form-control'
@@ -110,7 +110,6 @@ export default class CreateTodo extends Component {
                         <label className="form-check-label">High</label>
                     </div>
                 </div>
-
                 <div className="form-group">
                     <input type="submit" value="Create Todo" className="btn btn-primary"/>
                 </div>
