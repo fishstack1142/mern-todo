@@ -18,7 +18,7 @@ class App extends Component {
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <a href="/" className="navbar-brand" target="_blank">
-              <img src={logo} width="30" height="30" />
+              <img src={logo} width="30" height="30" alt="logo" />
             </a>
             <Link to="/" className="navbar-brand">MERN todo</Link>
             <div className="collapse navbar-collapse">
@@ -34,7 +34,7 @@ class App extends Component {
           </nav>
           <br />
           <Route path='/' exact component={TodosList} />
-          <Route path='/create/:id' component={EditList} />
+          <Route path='/edit/:id' component={EditList} />
           <Route path='/create' component={CreateList} />
         </div>
         
